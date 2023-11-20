@@ -67,6 +67,11 @@ namespace UngDungQuanLyCuuHoXe.GUI.Admin
                     MessageBox.Show("Đổi mật khẩu thất bại");
 
                 Close();
+            } else
+            {
+                tbMatKhauCu.Text = "";
+                tbMatKhauMoi.Text = "";
+                tbMatKhauMoiXacNhan.Text = "";
             }
         }
 
