@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\Admin\MatKhau.cs" />
     <Compile Include="Class\HandleXML.cs" />
     <Compile Include="GUI\Admin\frmAdminDoiMatKhau.cs">
       <SubType>Form</SubType>

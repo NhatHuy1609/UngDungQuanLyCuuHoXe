@@ -30,14 +30,14 @@ namespace UngDungQuanLyCuuHoXe.GUI.Admin
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dangNhapBtn = new System.Windows.Forms.Button();
+            this.cancelBtn = new System.Windows.Forms.Button();
             this.tbMatKhauCu = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tbMatKhauMoi = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tbMatKhauMoiXacNhan = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.confirmBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -49,19 +49,19 @@ namespace UngDungQuanLyCuuHoXe.GUI.Admin
             this.label1.Size = new System.Drawing.Size(328, 49);
             this.label1.TabIndex = 0;
             this.label1.Text = "ĐỔI MẬT KHẨU";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // dangNhapBtn
+            // cancelBtn
             // 
-            this.dangNhapBtn.BackColor = System.Drawing.Color.Tomato;
-            this.dangNhapBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.dangNhapBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dangNhapBtn.Location = new System.Drawing.Point(448, 359);
-            this.dangNhapBtn.Name = "dangNhapBtn";
-            this.dangNhapBtn.Size = new System.Drawing.Size(196, 59);
-            this.dangNhapBtn.TabIndex = 18;
-            this.dangNhapBtn.Text = "Hủy";
-            this.dangNhapBtn.UseVisualStyleBackColor = false;
+            this.cancelBtn.BackColor = System.Drawing.Color.Tomato;
+            this.cancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.cancelBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.cancelBtn.Location = new System.Drawing.Point(448, 359);
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.Size = new System.Drawing.Size(196, 59);
+            this.cancelBtn.TabIndex = 18;
+            this.cancelBtn.Text = "Hủy";
+            this.cancelBtn.UseVisualStyleBackColor = false;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // tbMatKhauCu
             // 
@@ -74,6 +74,7 @@ namespace UngDungQuanLyCuuHoXe.GUI.Admin
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Orange;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label4.Location = new System.Drawing.Point(72, 146);
             this.label4.Name = "label4";
@@ -92,6 +93,7 @@ namespace UngDungQuanLyCuuHoXe.GUI.Admin
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Orange;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label2.Location = new System.Drawing.Point(72, 209);
             this.label2.Name = "label2";
@@ -110,6 +112,7 @@ namespace UngDungQuanLyCuuHoXe.GUI.Admin
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Orange;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label3.Location = new System.Drawing.Point(72, 275);
             this.label3.Name = "label3";
@@ -117,35 +120,38 @@ namespace UngDungQuanLyCuuHoXe.GUI.Admin
             this.label3.TabIndex = 21;
             this.label3.Text = "Nhập lại mật khẩu mới:";
             // 
-            // button1
+            // confirmBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(165, 359);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(196, 59);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Đổi mật khẩu";
-            this.button1.UseVisualStyleBackColor = false;
+            this.confirmBtn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.confirmBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.confirmBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.confirmBtn.Location = new System.Drawing.Point(165, 359);
+            this.confirmBtn.Name = "confirmBtn";
+            this.confirmBtn.Size = new System.Drawing.Size(196, 59);
+            this.confirmBtn.TabIndex = 23;
+            this.confirmBtn.Text = "Đồng ý";
+            this.confirmBtn.UseVisualStyleBackColor = false;
+            this.confirmBtn.Click += new System.EventHandler(this.confirmBtn_Click);
             // 
             // frmAdminDoiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.BackgroundImage = global::UngDungQuanLyCuuHoXe.Properties.Resources.car_repair;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.confirmBtn);
             this.Controls.Add(this.tbMatKhauMoiXacNhan);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tbMatKhauMoi);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dangNhapBtn);
+            this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.tbMatKhauCu);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Name = "frmAdminDoiMatKhau";
             this.Text = "frmAdminDoiMatKhau";
+            this.Load += new System.EventHandler(this.frmAdminDoiMatKhau_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,13 +160,13 @@ namespace UngDungQuanLyCuuHoXe.GUI.Admin
         #endregion
 
         private System.Windows.Forms.Label label1;
-        internal System.Windows.Forms.Button dangNhapBtn;
+        internal System.Windows.Forms.Button cancelBtn;
         internal System.Windows.Forms.TextBox tbMatKhauCu;
         internal System.Windows.Forms.Label label4;
         internal System.Windows.Forms.TextBox tbMatKhauMoi;
         internal System.Windows.Forms.Label label2;
         internal System.Windows.Forms.TextBox tbMatKhauMoiXacNhan;
         internal System.Windows.Forms.Label label3;
-        internal System.Windows.Forms.Button button1;
+        internal System.Windows.Forms.Button confirmBtn;
     }
 }

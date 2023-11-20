@@ -16,6 +16,8 @@ namespace UngDungQuanLyCuuHoXe.GUI
     {
         HandleXML handleXML = new HandleXML();
 
+        public static string maAdmin = "";
+
         public frmAdmin()
         {
             InitializeComponent();
@@ -67,6 +69,7 @@ namespace UngDungQuanLyCuuHoXe.GUI
                 authorizeView(true);
                 showUserInformationView(foundRows[0]["Hoten"].ToString(), "Admin");
 
+                maAdmin = foundRows[0]["MaNguoiDung"].ToString();
                 tbTaiKhoan.Text = "";
                 tbMatKhau.Text = "";
             }
