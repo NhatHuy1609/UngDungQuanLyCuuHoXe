@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace UngDungQuanLyCuuHoXe.Class
 {
@@ -61,6 +62,26 @@ namespace UngDungQuanLyCuuHoXe.Class
                 }
             }
             return giatriB;
+        }
+
+        public void Them(string duongDan, string noiDung)
+        {
+            XmlTextReader reader = new XmlTextReader(duongDan);
+
+            XmlDocument doc = new XmlDocument();
+            doc.Load(reader);
+            reader.Close();
+
+            XmlDocumentFragment docFrag = doc.CreateDocumentFragment();
+            docFrag.InnerXml = noiDung;
+
+            //get the current node
+            XmlNode currNode = doc.DocumentElement;
+
+            //insert the docFragment after the last child of current node
+            currNode.InsertAfter(docFrag, currNode.LastChild);
+
+            doc.Save(duongDan);
         }
     }
 }

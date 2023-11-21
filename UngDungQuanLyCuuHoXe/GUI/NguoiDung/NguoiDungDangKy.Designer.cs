@@ -46,6 +46,8 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.btnSignup = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.tbMaNguoiDung = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -55,7 +57,7 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Location = new System.Drawing.Point(172, 37);
+            this.label1.Location = new System.Drawing.Point(170, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(336, 36);
             this.label1.TabIndex = 0;
@@ -65,7 +67,7 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(99, 110);
+            this.label2.Location = new System.Drawing.Point(99, 117);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 20);
             this.label2.TabIndex = 1;
@@ -84,6 +86,8 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.tbMaNguoiDung);
+            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.btnSignup);
             this.panel1.Controls.Add(this.tbEmail);
@@ -108,7 +112,7 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(99, 150);
+            this.label3.Location = new System.Drawing.Point(99, 157);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(124, 20);
             this.label3.TabIndex = 2;
@@ -118,7 +122,7 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(99, 193);
+            this.label4.Location = new System.Drawing.Point(99, 200);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 20);
             this.label4.TabIndex = 3;
@@ -128,7 +132,7 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(99, 237);
+            this.label5.Location = new System.Drawing.Point(99, 244);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 20);
             this.label5.TabIndex = 4;
@@ -138,7 +142,7 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(99, 281);
+            this.label6.Location = new System.Drawing.Point(99, 288);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(111, 20);
             this.label6.TabIndex = 5;
@@ -148,7 +152,7 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(99, 323);
+            this.label7.Location = new System.Drawing.Point(99, 330);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 20);
             this.label7.TabIndex = 6;
@@ -156,42 +160,42 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             // 
             // tbHoTen
             // 
-            this.tbHoTen.Location = new System.Drawing.Point(248, 107);
+            this.tbHoTen.Location = new System.Drawing.Point(248, 114);
             this.tbHoTen.Name = "tbHoTen";
             this.tbHoTen.Size = new System.Drawing.Size(306, 22);
             this.tbHoTen.TabIndex = 7;
             // 
             // tbUsername
             // 
-            this.tbUsername.Location = new System.Drawing.Point(248, 148);
+            this.tbUsername.Location = new System.Drawing.Point(248, 155);
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(306, 22);
             this.tbUsername.TabIndex = 8;
             // 
             // tbPassword
             // 
-            this.tbPassword.Location = new System.Drawing.Point(248, 191);
+            this.tbPassword.Location = new System.Drawing.Point(248, 198);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(306, 22);
             this.tbPassword.TabIndex = 9;
             // 
             // tbDiaChi
             // 
-            this.tbDiaChi.Location = new System.Drawing.Point(248, 235);
+            this.tbDiaChi.Location = new System.Drawing.Point(248, 242);
             this.tbDiaChi.Name = "tbDiaChi";
             this.tbDiaChi.Size = new System.Drawing.Size(306, 22);
             this.tbDiaChi.TabIndex = 10;
             // 
             // tbSoDienThoai
             // 
-            this.tbSoDienThoai.Location = new System.Drawing.Point(248, 279);
+            this.tbSoDienThoai.Location = new System.Drawing.Point(248, 286);
             this.tbSoDienThoai.Name = "tbSoDienThoai";
             this.tbSoDienThoai.Size = new System.Drawing.Size(306, 22);
             this.tbSoDienThoai.TabIndex = 11;
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(248, 321);
+            this.tbEmail.Location = new System.Drawing.Point(248, 328);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(306, 22);
             this.tbEmail.TabIndex = 12;
@@ -209,6 +213,7 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             this.btnSignup.TabIndex = 14;
             this.btnSignup.Text = "Đăng ký";
             this.btnSignup.UseVisualStyleBackColor = false;
+            this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
             // 
             // btnBack
             // 
@@ -222,6 +227,24 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             this.btnBack.TabIndex = 15;
             this.btnBack.Text = "Trở về";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // tbMaNguoiDung
+            // 
+            this.tbMaNguoiDung.Location = new System.Drawing.Point(248, 75);
+            this.tbMaNguoiDung.Name = "tbMaNguoiDung";
+            this.tbMaNguoiDung.Size = new System.Drawing.Size(306, 22);
+            this.tbMaNguoiDung.TabIndex = 17;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(99, 78);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(123, 20);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Mã người dùng:";
             // 
             // NguoiDungDangKy
             // 
@@ -258,5 +281,7 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSignup;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.TextBox tbMaNguoiDung;
+        private System.Windows.Forms.Label label8;
     }
 }
