@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace UngDungQuanLyCuuHoXe.Class
 {
     class HandleXML
     {
-        //string conn = @"Data Source=DESKTOP-0TDNQCQ\SQLEXPRESS;Initial Catalog=dbQUANLYCUUHOXE;Integrated Security=True";
-        string conn = @"Data Source=NHATHUY16903\SQLEXPRESS;Initial Catalog=dbQUANLYCUUHOXE;Persist Security Info=True;User ID=pvnhathuy;Password=Nhathuy160903";
+        string conn = @"data source=desktop-0tdnqcq\sqlexpress;initial catalog=dbquanlycuuhoxe;integrated security=true";
+        //string conn = @"Data Source=NHATHUY16903\SQLEXPRESS;Initial Catalog=dbQUANLYCUUHOXE;Persist Security Info=True;User ID=pvnhathuy;Password=Nhathuy160903";
 
         public void TaoFileXML(string tenBang)
         {
@@ -61,6 +62,26 @@ namespace UngDungQuanLyCuuHoXe.Class
                 }
             }
             return giatriB;
+        }
+
+        public void Them(string duongDan, string noiDung)
+        {
+            XmlTextReader reader = new XmlTextReader(duongDan);
+
+            XmlDocument doc = new XmlDocument();
+            doc.Load(reader);
+            reader.Close();
+
+            XmlDocumentFragment docFrag = doc.CreateDocumentFragment();
+            docFrag.InnerXml = noiDung;
+
+            //get the current node
+            XmlNode currNode = doc.DocumentElement;
+
+            //insert the docFragment after the last child of current node
+            currNode.InsertAfter(docFrag, currNode.LastChild);
+
+            doc.Save(duongDan);
         }
     }
 }
