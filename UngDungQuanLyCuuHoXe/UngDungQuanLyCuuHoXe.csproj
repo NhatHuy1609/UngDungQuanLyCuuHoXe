@@ -48,11 +48,18 @@
   <ItemGroup>
     <Compile Include="Class\Admin\MatKhau.cs" />
     <Compile Include="Class\HandleXML.cs" />
+    <Compile Include="Class\NguoiDung\DangNhap.cs" />
     <Compile Include="GUI\Admin\frmAdminDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Admin\frmAdminDoiMatKhau.Designer.cs">
       <DependentUpon>frmAdminDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NguoiDung\NguoiDungDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NguoiDung\NguoiDungDangKy.Designer.cs">
+      <DependentUpon>NguoiDungDangKy.cs</DependentUpon>
     </Compile>
     <Compile Include="TrangChu.cs">
       <SubType>Form</SubType>
@@ -76,6 +83,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\Admin\frmAdminDoiMatKhau.resx">
       <DependentUpon>frmAdminDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NguoiDung\frmNguoiDung.resx">
+      <DependentUpon>frmNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NguoiDung\NguoiDungDangKy.resx">
+      <DependentUpon>NguoiDungDangKy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
@@ -107,6 +120,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\car_service_bg.png" />
+    <None Include="Resources\tow_truck.png" />
+    <None Include="Resources\tow_truck_bg.png" />
     <None Include="Resources\background_admin.jpg" />
     <Content Include="Resources\car_repair.jpg" />
   </ItemGroup>

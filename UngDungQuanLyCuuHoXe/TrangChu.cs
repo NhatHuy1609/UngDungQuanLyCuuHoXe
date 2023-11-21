@@ -37,5 +37,14 @@ namespace UngDungQuanLyCuuHoXe
             frm.ShowDialog();
             this.Show();
         }
+
+        private void btnNguoiDung_Click(object sender, EventArgs e)
+        {
+            frmNguoiDung frm = new frmNguoiDung();
+
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
     }
 }
