@@ -29,15 +29,14 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             }
             else
             {
-                dangky.Them(tbMaNguoiDung.Text, tbUsername.Text, tbPassword.Text, tbHoTen.Text, tbDiaChi.Text, tbSoDienThoai.Text, tbEmail.Text, 1);
-                MessageBox.Show("Đăng ký tài khoản thành công! Quay lại Đăng nhập để tiếp tục.");
+                dangky.Them(tbUsername.Text, tbPassword.Text, tbHoTen.Text, tbDiaChi.Text, tbSoDienThoai.Text, tbEmail.Text, 1);
+                MessageBox.Show("Đăng ký tài khoản thành công!");
             }
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            frmNguoiDung frm = new frmNguoiDung();
-            frm.Close();
+            this.Close();
         }
     }
 }
