@@ -99,5 +99,16 @@ namespace UngDungQuanLyCuuHoXe.GUI
             frmAdminDoiMatKhau frm = new frmAdminDoiMatKhau();
             frm.ShowDialog();
         }
+
+        private void thôngTinNgườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmQuanLyNguoiDung frm = new frmQuanLyNguoiDung();
+            frm.ShowDialog();
+        }
+
+        private void quảnLýNgườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

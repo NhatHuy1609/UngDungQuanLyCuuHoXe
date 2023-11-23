@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Admin\MatKhau.cs" />
+    <Compile Include="Class\Admin\HandleNguoiDung.cs" />
     <Compile Include="Class\HandleXML.cs" />
     <Compile Include="Class\NguoiDung\DangKy.cs" />
     <Compile Include="Class\NguoiDung\DangNhap.cs" />
@@ -55,6 +56,12 @@
     </Compile>
     <Compile Include="GUI\Admin\frmAdminDoiMatKhau.Designer.cs">
       <DependentUpon>frmAdminDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\frmQuanLyNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\frmQuanLyNguoiDung.Designer.cs">
+      <DependentUpon>frmQuanLyNguoiDung.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\NguoiDung\NguoiDungDangKy.cs">
       <SubType>Form</SubType>
@@ -84,6 +91,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\Admin\frmAdminDoiMatKhau.resx">
       <DependentUpon>frmAdminDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\frmQuanLyNguoiDung.resx">
+      <DependentUpon>frmQuanLyNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\NguoiDung\frmNguoiDung.resx">
       <DependentUpon>frmNguoiDung.cs</DependentUpon>

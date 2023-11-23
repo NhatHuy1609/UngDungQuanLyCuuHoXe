@@ -13,8 +13,8 @@ namespace UngDungQuanLyCuuHoXe.Class
 {
     class HandleXML
     {
-        string conn = @"data source=desktop-0tdnqcq\sqlexpress;initial catalog=dbquanlycuuhoxe;integrated security=true";
-        //string conn = @"Data Source=NHATHUY16903\SQLEXPRESS;Initial Catalog=dbQUANLYCUUHOXE;Persist Security Info=True;User ID=pvnhathuy;Password=Nhathuy160903";
+        //string conn = @"data source=desktop-0tdnqcq\sqlexpress;initial catalog=dbquanlycuuhoxe;integrated security=true";
+        string conn = @"Data Source=NHATHUY16903\SQLEXPRESS;Initial Catalog=dbQUANLYCUUHOXE;Persist Security Info=True;User ID=pvnhathuy;Password=Nhathuy160903";
 
         public void TaoFileXML(string tenBang)
         {
@@ -82,6 +82,32 @@ namespace UngDungQuanLyCuuHoXe.Class
             currNode.InsertAfter(docFrag, currNode.LastChild);
 
             doc.Save(duongDan);
+        }
+
+        public void Sua(string duongDan, string tenFile, string suaTheoTruong, string giaTriTruong, string noiDung)
+        {
+
+            XmlTextReader reader = new XmlTextReader(duongDan);
+            XmlDocument doc = new XmlDocument();
+            doc.Load(reader);
+            reader.Close();
+            XmlNode oldHang;
+            XmlElement root = doc.DocumentElement;
+            oldHang = root.SelectSingleNode("/NewDataSet/" + tenFile + "[" + suaTheoTruong + "='" + giaTriTruong + "']");
+            XmlElement newhang = doc.CreateElement(tenFile);
+            newhang.InnerXml = noiDung;
+            root.ReplaceChild(newhang, oldHang);
+            doc.Save(duongDan);
+        }
+
+        public void Xoa(string duongDan, string tenFileXML, string xoaTheoTruong, string giaTriTruong)
+        {
+            string fileName = Application.StartupPath + "\\" + duongDan;
+            XmlDocument doc = new XmlDocument();
+            doc.Load(fileName);
+            XmlNode nodeCu = doc.SelectSingleNode("NewDataSet/" + tenFileXML + "[" + xoaTheoTruong + "='" + giaTriTruong + "']");
+            doc.DocumentElement.RemoveChild(nodeCu);
+            doc.Save(fileName);
         }
     }
 }
