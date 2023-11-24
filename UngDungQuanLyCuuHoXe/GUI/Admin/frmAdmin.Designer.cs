@@ -137,6 +137,7 @@ namespace UngDungQuanLyCuuHoXe.GUI
             this.quảnLýCứuHộToolStripMenuItem.Name = "quảnLýCứuHộToolStripMenuItem";
             this.quảnLýCứuHộToolStripMenuItem.Size = new System.Drawing.Size(149, 29);
             this.quảnLýCứuHộToolStripMenuItem.Text = "Quản lý cứu hộ";
+            this.quảnLýCứuHộToolStripMenuItem.Click += new System.EventHandler(this.quảnLýCứuHộToolStripMenuItem_Click);
             // 
             // trợGiúpToolStripMenuItem
             // 
@@ -262,6 +263,7 @@ namespace UngDungQuanLyCuuHoXe.GUI
             this.tbMatKhau.Location = new System.Drawing.Point(202, 106);
             this.tbMatKhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbMatKhau.Name = "tbMatKhau";
+            this.tbMatKhau.PasswordChar = '*';
             this.tbMatKhau.Size = new System.Drawing.Size(314, 35);
             this.tbMatKhau.TabIndex = 12;
             // 

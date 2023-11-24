@@ -117,5 +117,11 @@ namespace UngDungQuanLyCuuHoXe.GUI
             frmQuanLyPhuongTienNguoiDung frm = new frmQuanLyPhuongTienNguoiDung();
             frm.ShowDialog();
         }
+
+        private void quảnLýCứuHộToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmQuanLyYeuCauCuuHo frm = new frmQuanLyYeuCauCuuHo();
+            frm.ShowDialog();
+        }
     }
 }
