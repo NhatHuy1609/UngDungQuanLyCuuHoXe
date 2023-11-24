@@ -109,5 +109,14 @@ namespace UngDungQuanLyCuuHoXe.Class
             doc.DocumentElement.RemoveChild(nodeCu);
             doc.Save(fileName);
         }
+
+        public void InsertOrUpDateSQL(string sql)
+        {
+            SqlConnection con = new SqlConnection(conn);
+            con.Open();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
     }
 }

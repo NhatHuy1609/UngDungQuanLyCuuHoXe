@@ -50,6 +50,7 @@
     <Compile Include="Class\Admin\HandleYeuCauCuuHo.cs" />
     <Compile Include="Class\Admin\MatKhau.cs" />
     <Compile Include="Class\Admin\HandleNguoiDung.cs" />
+    <Compile Include="Class\ChuyenDoi.cs" />
     <Compile Include="Class\HandleXML.cs" />
     <Compile Include="Class\NguoiDung\DangKy.cs" />
     <Compile Include="Class\NguoiDung\DangNhap.cs" />
