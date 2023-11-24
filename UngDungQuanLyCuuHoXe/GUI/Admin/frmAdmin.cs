@@ -39,6 +39,7 @@ namespace UngDungQuanLyCuuHoXe.GUI
             đăngXuấtToolStripMenuItem.Enabled = isSignedIn;
 
             quảnLýNgườiDùngToolStripMenuItem.Enabled = isSignedIn;
+            quảnLýCứuHộToolStripMenuItem.Enabled = isSignedIn;
             chuyểnĐổiToolStripMenuItem.Enabled = isSignedIn;
 
             string banner = "";
@@ -109,6 +110,12 @@ namespace UngDungQuanLyCuuHoXe.GUI
         private void quảnLýNgườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void thôngTinPhươngTiệnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmQuanLyPhuongTienNguoiDung frm = new frmQuanLyPhuongTienNguoiDung();
+            frm.ShowDialog();
         }
     }
 }

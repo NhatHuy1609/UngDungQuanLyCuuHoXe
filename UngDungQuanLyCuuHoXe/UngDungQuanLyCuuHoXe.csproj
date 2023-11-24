@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\Admin\HandlePhuongTien.cs" />
     <Compile Include="Class\Admin\MatKhau.cs" />
     <Compile Include="Class\Admin\HandleNguoiDung.cs" />
     <Compile Include="Class\HandleXML.cs" />
@@ -62,6 +63,12 @@
     </Compile>
     <Compile Include="GUI\Admin\frmQuanLyNguoiDung.Designer.cs">
       <DependentUpon>frmQuanLyNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\frmQuanLyPhuongTienNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\frmQuanLyPhuongTienNguoiDung.Designer.cs">
+      <DependentUpon>frmQuanLyPhuongTienNguoiDung.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\NguoiDung\NguoiDungDangKy.cs">
       <SubType>Form</SubType>
@@ -94,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\frmQuanLyNguoiDung.resx">
       <DependentUpon>frmQuanLyNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\frmQuanLyPhuongTienNguoiDung.resx">
+      <DependentUpon>frmQuanLyPhuongTienNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\NguoiDung\frmNguoiDung.resx">
       <DependentUpon>frmNguoiDung.cs</DependentUpon>

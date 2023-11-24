@@ -49,16 +49,15 @@ namespace UngDungQuanLyCuuHoXe.Class.Admin
 
         public void CapNhatNguoiDung(string mand, string tendn, string matkhau, string hoten, string diachi, string sodt, string email)
         {
-            string noiDung = "<_x0027_NguoiDung_x0027_>" +
-                        "<MaNguoiDung>" + mand + "</MaNguoiDung>" +
+            string noiDung = "<MaNguoiDung>" + mand + "</MaNguoiDung>" +
                         "<TenDangNhap>" + tendn + "</TenDangNhap>" +
                         "<MatKhau>" + matkhau + "</MatKhau>" +
                         "<HoTen>" + hoten + "</HoTen>" +
                         "<DiaChi>" + diachi + "</DiaChi>" +
                         "<SoDienThoai>" + sodt + "</SoDienThoai>" +
                         "<Email>" + email + "</Email>" +
-                        "<MaQuyen>" + 1 + "</MaQuyen>" +
-                        "</_x0027_NguoiDung_x0027_>";
+                        "<MaQuyen>" + 1 + "</MaQuyen>";
+
             handleXML.Sua("NguoiDung.xml", "_x0027_NguoiDung_x0027_", "MaNguoiDung", mand, noiDung);
         }
 

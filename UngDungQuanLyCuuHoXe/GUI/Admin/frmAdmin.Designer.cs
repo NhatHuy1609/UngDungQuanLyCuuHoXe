@@ -36,6 +36,8 @@ namespace UngDungQuanLyCuuHoXe.GUI
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýNgườiDùngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinNgườiDùngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thôngTinPhươngTiệnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quảnLýCứuHộToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chuyểnĐổiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xMLSQLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,8 +55,6 @@ namespace UngDungQuanLyCuuHoXe.GUI
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.labelBanner = new System.Windows.Forms.Label();
-            this.thôngTinPhươngTiệnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảnLýCứuHộToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -74,7 +74,6 @@ namespace UngDungQuanLyCuuHoXe.GUI
             this.chuyểnĐổiToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(983, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
@@ -125,6 +124,19 @@ namespace UngDungQuanLyCuuHoXe.GUI
             this.thôngTinNgườiDùngToolStripMenuItem.Size = new System.Drawing.Size(293, 34);
             this.thôngTinNgườiDùngToolStripMenuItem.Text = "Thông tin người dùng";
             this.thôngTinNgườiDùngToolStripMenuItem.Click += new System.EventHandler(this.thôngTinNgườiDùngToolStripMenuItem_Click);
+            // 
+            // thôngTinPhươngTiệnToolStripMenuItem
+            // 
+            this.thôngTinPhươngTiệnToolStripMenuItem.Name = "thôngTinPhươngTiệnToolStripMenuItem";
+            this.thôngTinPhươngTiệnToolStripMenuItem.Size = new System.Drawing.Size(293, 34);
+            this.thôngTinPhươngTiệnToolStripMenuItem.Text = "Thông tin phương tiện";
+            this.thôngTinPhươngTiệnToolStripMenuItem.Click += new System.EventHandler(this.thôngTinPhươngTiệnToolStripMenuItem_Click);
+            // 
+            // quảnLýCứuHộToolStripMenuItem
+            // 
+            this.quảnLýCứuHộToolStripMenuItem.Name = "quảnLýCứuHộToolStripMenuItem";
+            this.quảnLýCứuHộToolStripMenuItem.Size = new System.Drawing.Size(149, 29);
+            this.quảnLýCứuHộToolStripMenuItem.Text = "Quản lý cứu hộ";
             // 
             // trợGiúpToolStripMenuItem
             // 
@@ -292,18 +304,6 @@ namespace UngDungQuanLyCuuHoXe.GUI
             this.labelBanner.Size = new System.Drawing.Size(387, 46);
             this.labelBanner.TabIndex = 4;
             this.labelBanner.Text = "Đăng nhập tài khoản";
-            // 
-            // thôngTinPhươngTiệnToolStripMenuItem
-            // 
-            this.thôngTinPhươngTiệnToolStripMenuItem.Name = "thôngTinPhươngTiệnToolStripMenuItem";
-            this.thôngTinPhươngTiệnToolStripMenuItem.Size = new System.Drawing.Size(293, 34);
-            this.thôngTinPhươngTiệnToolStripMenuItem.Text = "Thông tin phương tiện";
-            // 
-            // quảnLýCứuHộToolStripMenuItem
-            // 
-            this.quảnLýCứuHộToolStripMenuItem.Name = "quảnLýCứuHộToolStripMenuItem";
-            this.quảnLýCứuHộToolStripMenuItem.Size = new System.Drawing.Size(149, 29);
-            this.quảnLýCứuHộToolStripMenuItem.Text = "Quản lý cứu hộ";
             // 
             // frmAdmin
             // 
