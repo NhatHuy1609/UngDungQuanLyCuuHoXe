@@ -34,7 +34,7 @@ namespace UngDungQuanLyCuuHoXe.Class
                 }
                 sql += "N'" + table.Rows[i][table.Columns.Count - 1].ToString().Trim() + "'";
                 sql += ")";
-                MessageBox.Show(sql);
+                //MessageBox.Show(sql);
                 handleXML.InsertOrUpDateSQL(sql);
             }
         }
