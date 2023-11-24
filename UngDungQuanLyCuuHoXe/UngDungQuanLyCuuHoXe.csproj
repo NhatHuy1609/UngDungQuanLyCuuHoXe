@@ -52,6 +52,7 @@
     <Compile Include="Class\HandleXML.cs" />
     <Compile Include="Class\NguoiDung\DangKy.cs" />
     <Compile Include="Class\NguoiDung\DangNhap.cs" />
+    <Compile Include="Class\NguoiDung\PhuongTien.cs" />
     <Compile Include="GUI\Admin\frmAdminDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +70,12 @@
     </Compile>
     <Compile Include="GUI\Admin\frmQuanLyPhuongTienNguoiDung.Designer.cs">
       <DependentUpon>frmQuanLyPhuongTienNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NguoiDung\frmYeuCauCuuHo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NguoiDung\frmYeuCauCuuHo.Designer.cs">
+      <DependentUpon>frmYeuCauCuuHo.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\NguoiDung\NguoiDungDangKy.cs">
       <SubType>Form</SubType>
@@ -107,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\NguoiDung\frmNguoiDung.resx">
       <DependentUpon>frmNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NguoiDung\frmYeuCauCuuHo.resx">
+      <DependentUpon>frmYeuCauCuuHo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\NguoiDung\NguoiDungDangKy.resx">
       <DependentUpon>NguoiDungDangKy.cs</DependentUpon>

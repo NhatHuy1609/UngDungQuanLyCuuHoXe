@@ -20,10 +20,16 @@ namespace UngDungQuanLyCuuHoXe.GUI
             InitializeComponent();
         }
 
-        private void showUserInformationView(string name = "", string role = "")
+        public string GetMaNguoiDung()
+        {
+            return lbMaNguoiDung.Text;
+        }
+
+        private void showUserInformationView(string name = "", string role = "", string id = "")
         {
             lbUserName.Text = name;
             lbUserRole.Text = role;
+            lbMaNguoiDung.Text = id;
         }
 
         private void authorizedView(bool isSignIn)
@@ -63,7 +69,7 @@ namespace UngDungQuanLyCuuHoXe.GUI
                 MessageBox.Show("Đăng nhập thành công!");
                 authorizedView(true);
                 lbUserName.Text = tbUsername.Text;
-                showUserInformationView(foundRows[0]["Hoten"].ToString(), "Nguoi dung");
+                showUserInformationView(foundRows[0]["Hoten"].ToString(), "Người dùng", foundRows[0]["MaNguoiDung"].ToString());
 
                 tbUsername.Text = "";
                 tbPassword.Text = "";
@@ -85,6 +91,23 @@ namespace UngDungQuanLyCuuHoXe.GUI
         private void btnSignup_Click(object sender, EventArgs e)
         {
             NguoiDungDangKy frm = new NguoiDungDangKy();
+            frm.ShowDialog();
+        }
+
+        private void subTabDangKy_Click(object sender, EventArgs e)
+        {
+            NguoiDungDangKy frm = new NguoiDungDangKy();
+            frm.ShowDialog();
+        }
+
+        private void tabCuuHo_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void gửiYêuCầuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmYeuCauCuuHo frm = new frmYeuCauCuuHo();
+            frm.SetMaNguoiDung(GetMaNguoiDung());
             frm.ShowDialog();
         }
     }
