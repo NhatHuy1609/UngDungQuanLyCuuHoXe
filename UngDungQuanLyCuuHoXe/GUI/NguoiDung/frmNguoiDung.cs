@@ -34,6 +34,7 @@ namespace UngDungQuanLyCuuHoXe.GUI
 
         private void authorizedView(bool isSignIn)
         {
+            tabTaiKhoan.Enabled = !isSignIn;
             tabQuanLiNguoiDung.Enabled = isSignIn;
             tabCuuHo.Enabled = isSignIn;
 

@@ -16,7 +16,7 @@ namespace UngDungQuanLyCuuHoXe.Class.NguoiDung
             XmlTextReader reader = new XmlTextReader("PhuongTien.xml");
             XmlDocument doc = new XmlDocument();
             doc.Load(reader);
-            XmlNode node = doc.SelectSingleNode("NewDataSet/PhuongTien[MaPhuongTien='" + MaPhuongTien + "']");
+            XmlNode node = doc.SelectSingleNode("NewDataSet/_x0027_PhuongTien_x0027_[MaPhuongTien='" + MaPhuongTien + "']");
             reader.Close();
             if (node != null)
             {

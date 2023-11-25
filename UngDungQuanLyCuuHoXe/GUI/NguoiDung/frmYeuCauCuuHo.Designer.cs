@@ -40,12 +40,13 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             this.btnDelete = new System.Windows.Forms.Button();
             this.dgvPhuongTien = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbViTri = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbMoTaVanDe = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tbMaPhuongTien = new System.Windows.Forms.TextBox();
             this.lbMaNguoiDung = new System.Windows.Forms.Label();
+            this.btnYeuCau = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhuongTien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,7 +100,7 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(45, 310);
+            this.btnAdd.Location = new System.Drawing.Point(58, 310);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(86, 34);
             this.btnAdd.TabIndex = 6;
@@ -109,7 +110,7 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(191, 310);
+            this.btnUpdate.Location = new System.Drawing.Point(178, 310);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(86, 34);
             this.btnUpdate.TabIndex = 7;
@@ -119,7 +120,7 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(345, 310);
+            this.btnDelete.Location = new System.Drawing.Point(292, 310);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(86, 34);
             this.btnDelete.TabIndex = 8;
@@ -147,13 +148,13 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             this.label4.TabIndex = 11;
             this.label4.Text = "Vị trí:";
             // 
-            // textBox1
+            // tbViTri
             // 
-            this.textBox1.Location = new System.Drawing.Point(219, 390);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(706, 55);
-            this.textBox1.TabIndex = 10;
+            this.tbViTri.Location = new System.Drawing.Point(219, 390);
+            this.tbViTri.Multiline = true;
+            this.tbViTri.Name = "tbViTri";
+            this.tbViTri.Size = new System.Drawing.Size(706, 55);
+            this.tbViTri.TabIndex = 10;
             // 
             // label5
             // 
@@ -164,13 +165,13 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             this.label5.TabIndex = 13;
             this.label5.Text = "Mô tả vấn đề:";
             // 
-            // textBox2
+            // tbMoTaVanDe
             // 
-            this.textBox2.Location = new System.Drawing.Point(219, 472);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(706, 55);
-            this.textBox2.TabIndex = 12;
+            this.tbMoTaVanDe.Location = new System.Drawing.Point(219, 472);
+            this.tbMoTaVanDe.Multiline = true;
+            this.tbMoTaVanDe.Name = "tbMoTaVanDe";
+            this.tbMoTaVanDe.Size = new System.Drawing.Size(706, 55);
+            this.tbMoTaVanDe.TabIndex = 12;
             // 
             // label6
             // 
@@ -198,18 +199,29 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             this.lbMaNguoiDung.Text = "ID";
             this.lbMaNguoiDung.Visible = false;
             // 
+            // btnYeuCau
+            // 
+            this.btnYeuCau.Location = new System.Drawing.Point(426, 564);
+            this.btnYeuCau.Name = "btnYeuCau";
+            this.btnYeuCau.Size = new System.Drawing.Size(86, 34);
+            this.btnYeuCau.TabIndex = 19;
+            this.btnYeuCau.Text = "Gửi yêu cầu";
+            this.btnYeuCau.UseVisualStyleBackColor = true;
+            this.btnYeuCau.Click += new System.EventHandler(this.btnYeuCau_Click);
+            // 
             // frmYeuCauCuuHo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(979, 591);
+            this.ClientSize = new System.Drawing.Size(979, 630);
+            this.Controls.Add(this.btnYeuCau);
             this.Controls.Add(this.lbMaNguoiDung);
             this.Controls.Add(this.tbMaPhuongTien);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbMoTaVanDe);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbViTri);
             this.Controls.Add(this.dgvPhuongTien);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
@@ -242,11 +254,12 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DataGridView dgvPhuongTien;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbViTri;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbMoTaVanDe;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbMaPhuongTien;
         private System.Windows.Forms.Label lbMaNguoiDung;
+        private System.Windows.Forms.Button btnYeuCau;
     }
 }

@@ -16,7 +16,8 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
     {
         HandleXML handleXML = new HandleXML();
         PhuongTien phuongtien = new PhuongTien();
-        string MaPhuongTien, LoaiPhuongTien, TenPhuongTien, BienSoXe, MaNguoiDung;
+        YeuCauCuuHo yeuCauCuuHo = new YeuCauCuuHo();
+        string MaPhuongTien, LoaiPhuongTien, TenPhuongTien, BienSoXe, MaNguoiDung, ViTri, MoTaVanDe;
 
         public frmYeuCauCuuHo()
         {
@@ -35,9 +36,11 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             TenPhuongTien = tbTenPhuongTien.Text;
             BienSoXe = tbBienSoXe.Text;
             MaNguoiDung = lbMaNguoiDung.Text;
+            ViTri = tbViTri.Text;
+            MoTaVanDe = tbMoTaVanDe.Text;
         }
 
-        
+
 
         public void hienThiPhuongTien()
         {
@@ -46,12 +49,14 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             dgvPhuongTien.DataSource = dt;
         }
 
-        
+
 
         private void frmYeuCauCuuHo_Load(object sender, EventArgs e)
         {
             hienThiPhuongTien();
         }
+
+
 
         private void dgvPhuongTien_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -72,6 +77,8 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             else
             {
                 phuongtien.Them(tbMaPhuongTien.Text, tbLoaiPhuongTien.Text, tbTenPhuongTien.Text, tbBienSoXe.Text, lbMaNguoiDung.Text);
+                MessageBox.Show("Đã thêm!");
+
             }
         }
 
@@ -88,6 +95,20 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             phuongtien.Xoa(tbMaPhuongTien.Text);
             MessageBox.Show("Đã xóa!");
             hienThiPhuongTien();
+        }
+
+        private void btnYeuCau_Click(object sender, EventArgs e)
+        {
+            LoadDuLieu();
+            if (ViTri == "" || MoTaVanDe == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
+            }
+            else
+            {
+            yeuCauCuuHo.Them(tbMoTaVanDe.Text, tbViTri.Text, tbMaPhuongTien.Text, lbMaNguoiDung.Text);
+            MessageBox.Show("Đã gửi yêu cầu!");
+            }
         }
     }
 }

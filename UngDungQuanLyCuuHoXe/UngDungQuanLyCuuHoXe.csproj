@@ -53,6 +53,7 @@
     <Compile Include="Class\NguoiDung\DangKy.cs" />
     <Compile Include="Class\NguoiDung\DangNhap.cs" />
     <Compile Include="Class\NguoiDung\PhuongTien.cs" />
+    <Compile Include="Class\NguoiDung\YeuCauCuuHo.cs" />
     <Compile Include="GUI\Admin\frmAdminDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>

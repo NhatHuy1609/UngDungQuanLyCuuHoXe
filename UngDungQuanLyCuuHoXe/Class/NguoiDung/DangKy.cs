@@ -16,7 +16,7 @@ namespace UngDungQuanLyCuuHoXe.Class.NguoiDung
             XmlTextReader reader = new XmlTextReader("NguoiDung.xml");
             XmlDocument doc = new XmlDocument();
             doc.Load(reader);
-            XmlNode node = doc.SelectSingleNode("NewDataSet/NguoiDung[TenDangNhap='" + TenDangNhap + "']");
+            XmlNode node = doc.SelectSingleNode("NewDataSet/_x0027_NguoiDung_x0027_[TenDangNhap='" + TenDangNhap + "']");
             reader.Close();
             if (node != null)
             {
