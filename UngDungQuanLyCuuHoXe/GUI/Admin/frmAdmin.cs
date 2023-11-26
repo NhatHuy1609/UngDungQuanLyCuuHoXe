@@ -15,6 +15,7 @@ namespace UngDungQuanLyCuuHoXe.GUI
     public partial class frmAdmin : Form
     {
         HandleXML handleXML = new HandleXML();
+        ChuyenDoi chuyenDoi = new ChuyenDoi();
 
         public static string maAdmin = "";
 
@@ -116,6 +117,38 @@ namespace UngDungQuanLyCuuHoXe.GUI
         {
             frmQuanLyPhuongTienNguoiDung frm = new frmQuanLyPhuongTienNguoiDung();
             frm.ShowDialog();
+        }
+
+        private void quảnLýCứuHộToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmQuanLyYeuCauCuuHo frm = new frmQuanLyYeuCauCuuHo();
+            frm.ShowDialog();
+        }
+
+        private void xMLSQLToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                chuyenDoi.CapNhapSQL();
+                MessageBox.Show("Cập nhập SQL server thành công");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
+        }
+
+        private void xMLSQLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                chuyenDoi.ChuyenDoiSQLSangXML();
+                MessageBox.Show("Tạo XML thành công");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
         }
     }
 }

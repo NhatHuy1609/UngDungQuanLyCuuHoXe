@@ -55,6 +55,7 @@ namespace UngDungQuanLyCuuHoXe.GUI
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.labelBanner = new System.Windows.Forms.Label();
+            this.xMLSQLToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -137,6 +138,7 @@ namespace UngDungQuanLyCuuHoXe.GUI
             this.quảnLýCứuHộToolStripMenuItem.Name = "quảnLýCứuHộToolStripMenuItem";
             this.quảnLýCứuHộToolStripMenuItem.Size = new System.Drawing.Size(149, 29);
             this.quảnLýCứuHộToolStripMenuItem.Text = "Quản lý cứu hộ";
+            this.quảnLýCứuHộToolStripMenuItem.Click += new System.EventHandler(this.quảnLýCứuHộToolStripMenuItem_Click);
             // 
             // trợGiúpToolStripMenuItem
             // 
@@ -147,7 +149,8 @@ namespace UngDungQuanLyCuuHoXe.GUI
             // chuyểnĐổiToolStripMenuItem
             // 
             this.chuyểnĐổiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.xMLSQLToolStripMenuItem});
+            this.xMLSQLToolStripMenuItem,
+            this.xMLSQLToolStripMenuItem1});
             this.chuyểnĐổiToolStripMenuItem.Name = "chuyểnĐổiToolStripMenuItem";
             this.chuyểnĐổiToolStripMenuItem.Size = new System.Drawing.Size(118, 29);
             this.chuyểnĐổiToolStripMenuItem.Text = "Chuyển đổi";
@@ -155,8 +158,9 @@ namespace UngDungQuanLyCuuHoXe.GUI
             // xMLSQLToolStripMenuItem
             // 
             this.xMLSQLToolStripMenuItem.Name = "xMLSQLToolStripMenuItem";
-            this.xMLSQLToolStripMenuItem.Size = new System.Drawing.Size(210, 34);
+            this.xMLSQLToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.xMLSQLToolStripMenuItem.Text = "SQL -> XML";
+            this.xMLSQLToolStripMenuItem.Click += new System.EventHandler(this.xMLSQLToolStripMenuItem_Click);
             // 
             // groupBox1
             // 
@@ -262,6 +266,7 @@ namespace UngDungQuanLyCuuHoXe.GUI
             this.tbMatKhau.Location = new System.Drawing.Point(202, 106);
             this.tbMatKhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbMatKhau.Name = "tbMatKhau";
+            this.tbMatKhau.PasswordChar = '*';
             this.tbMatKhau.Size = new System.Drawing.Size(314, 35);
             this.tbMatKhau.TabIndex = 12;
             // 
@@ -304,6 +309,13 @@ namespace UngDungQuanLyCuuHoXe.GUI
             this.labelBanner.Size = new System.Drawing.Size(387, 46);
             this.labelBanner.TabIndex = 4;
             this.labelBanner.Text = "Đăng nhập tài khoản";
+            // 
+            // xMLSQLToolStripMenuItem1
+            // 
+            this.xMLSQLToolStripMenuItem1.Name = "xMLSQLToolStripMenuItem1";
+            this.xMLSQLToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.xMLSQLToolStripMenuItem1.Text = "XML -> SQL";
+            this.xMLSQLToolStripMenuItem1.Click += new System.EventHandler(this.xMLSQLToolStripMenuItem1_Click);
             // 
             // frmAdmin
             // 
@@ -359,5 +371,6 @@ namespace UngDungQuanLyCuuHoXe.GUI
         private System.Windows.Forms.ToolStripMenuItem đăngNhậpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thôngTinPhươngTiệnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quảnLýCứuHộToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem xMLSQLToolStripMenuItem1;
     }
 }
