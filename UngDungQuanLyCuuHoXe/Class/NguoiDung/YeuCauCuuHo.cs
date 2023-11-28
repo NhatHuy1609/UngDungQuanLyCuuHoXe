@@ -32,7 +32,7 @@ namespace UngDungQuanLyCuuHoXe.Class.NguoiDung
         public void Them(string MoTaVanDe, string ViTri, string MaPhuongTien, string MaNguoiDung)
         {
             string trangThai = "Chờ xử lý";
-            string thoiGian = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
+            string thoiGian = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:sszzz");
             string maCuuHo = AutoIncrementMaCuuHo();
             string noiDung = "<_x0027_YeuCauCuuHo_x0027_>" +
                 "<MaCuuHo>" + maCuuHo + "</MaCuuHo>" +

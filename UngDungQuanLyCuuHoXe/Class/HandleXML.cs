@@ -13,8 +13,8 @@ namespace UngDungQuanLyCuuHoXe.Class
 {
     class HandleXML
     {
-        string conn = @"Data Source=DESKTOP-0TDNQCQ\SQLEXPRESS;Initial Catalog=dbQUANLYCUUHOXE;Integrated Security=True";
-        //string conn = @"Data Source=NHATHUY16903\SQLEXPRESS;Initial Catalog=dbQUANLYCUUHOXE;Persist Security Info=True;User ID=pvnhathuy;Password=Nhathuy160903";
+        //string conn = @"Data Source=DESKTOP-0TDNQCQ\SQLEXPRESS;Initial Catalog=dbQUANLYCUUHOXE;Integrated Security=True";
+        string conn = @"Data Source=NHATHUY16903\SQLEXPRESS;Initial Catalog=dbQUANLYCUUHOXE;Persist Security Info=True;User ID=pvnhathuy;Password=Nhathuy160903";
 
         public void TaoFileXML(string tenBang)
         {
