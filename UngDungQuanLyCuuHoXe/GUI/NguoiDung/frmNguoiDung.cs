@@ -111,5 +111,25 @@ namespace UngDungQuanLyCuuHoXe.GUI
             frm.SetMaNguoiDung(GetMaNguoiDung());
             frm.ShowDialog();
         }
+
+        private void sQLXMLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //try
+            //{
+            //    HT.TaoXML();
+            //    MessageBox.Show("Tạo XML thành công");
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("" + ex);
+            //}
+        }
+
+        private void đổiMậtKhẩuToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmDoiMatKhau frm = new frmDoiMatKhau();
+            frm.SetMaNguoiDung(GetMaNguoiDung());
+            frm.ShowDialog();
+        }
     }
 }

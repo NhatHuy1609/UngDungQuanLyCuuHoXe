@@ -41,7 +41,6 @@ namespace UngDungQuanLyCuuHoXe.GUI
 
             quảnLýNgườiDùngToolStripMenuItem.Enabled = isSignedIn;
             quảnLýCứuHộToolStripMenuItem.Enabled = isSignedIn;
-            chuyểnĐổiToolStripMenuItem.Enabled = isSignedIn;
 
             string banner = "";
             if (isSignedIn)

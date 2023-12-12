@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 using UngDungQuanLyCuuHoXe.Class;
 using UngDungQuanLyCuuHoXe.Class.NguoiDung;
 
@@ -31,7 +32,7 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
 
         public void LoadDuLieu()
         {
-            MaPhuongTien = tbMaPhuongTien.Text;
+            MaPhuongTien = lbMaPhuongTien.Text;
             LoaiPhuongTien = tbLoaiPhuongTien.Text;
             TenPhuongTien = tbTenPhuongTien.Text;
             BienSoXe = tbBienSoXe.Text;
@@ -46,10 +47,62 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
         {
             DataTable dt = new DataTable();
             dt = handleXML.LayDuLieuXML("PhuongTien.xml");
-            dgvPhuongTien.DataSource = dt;
+
+            DataView dv = new DataView(dt);
+            dv.RowFilter = $"MaNguoiDung = '{lbMaNguoiDung.Text}'";
+
+            if (dv.Count == 0)
+            {
+                MessageBox.Show("Không tìm thấy");
+            }
+            else
+            {
+                dgvPhuongTien.DataSource = dv.ToTable();
+
+                // Hide the "MaNguoiDung" column after setting the DataSource
+                dgvPhuongTien.Columns["MaNguoiDung"].Visible = false;
+            }
         }
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            XmlTextReader reader = new XmlTextReader("PhuongTien.xml");
+            DataSet ds = new DataSet();
+            ds.ReadXml(reader);
+            DataView dv = new DataView(ds.Tables[0]);
+            dv.Sort = "MaPhuongTien";
+            reader.Close();
 
+            // Filter DataView based on MaNguoiDung
+            dv.RowFilter = $"MaNguoiDung = '{lbMaNguoiDung.Text}'";
+            int index = dv.Find(tbSearch.Text);
+            if (index == -1)
+            {
+                MessageBox.Show("Không tìm thấy");
+                tbSearch.Text = "";
+                tbSearch.Focus();
+
+            }
+            else
+            {
+                DataTable dt = new DataTable();
+                dt.Columns.Add("Mã phương tiện");
+                dt.Columns.Add("Loại phương tiện");
+                dt.Columns.Add("Tên phương tiệnh");
+                dt.Columns.Add("Biển số xe");
+
+
+                object[] list = { dv[index]["MaPhuongTien"], dv[index]["LoaiPhuongTien"], dv[index]["TenPhuongTien"], dv[index]["BienSo"]};
+                dt.Rows.Add(list);
+                dgvPhuongTien.DataSource = dt;
+                tbSearch.Text = "";
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            hienThiPhuongTien();
+        }
 
         private void frmYeuCauCuuHo_Load(object sender, EventArgs e)
         {
@@ -61,10 +114,18 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
         private void dgvPhuongTien_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int d = dgvPhuongTien.CurrentRow.Index;
-            tbMaPhuongTien.Text = dgvPhuongTien.Rows[d].Cells[0].Value.ToString();
+            lbMaPhuongTien.Text = dgvPhuongTien.Rows[d].Cells[0].Value.ToString();
             tbLoaiPhuongTien.Text = dgvPhuongTien.Rows[d].Cells[1].Value.ToString();
             tbTenPhuongTien.Text = dgvPhuongTien.Rows[d].Cells[2].Value.ToString();
             tbBienSoXe.Text = dgvPhuongTien.Rows[d].Cells[3].Value.ToString();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            lbMaPhuongTien.Text = "";
+            tbLoaiPhuongTien.Text = "";
+            tbTenPhuongTien.Text = "";
+            tbBienSoXe.Text = "";
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -76,7 +137,7 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             }
             else
             {
-                phuongtien.Them(tbMaPhuongTien.Text, tbLoaiPhuongTien.Text, tbTenPhuongTien.Text, tbBienSoXe.Text, lbMaNguoiDung.Text);
+                phuongtien.Them(tbLoaiPhuongTien.Text, tbTenPhuongTien.Text, tbBienSoXe.Text, lbMaNguoiDung.Text);
                 MessageBox.Show("Đã thêm!");
 
             }
@@ -85,14 +146,14 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             LoadDuLieu();
-            phuongtien.Sua(tbMaPhuongTien.Text, tbLoaiPhuongTien.Text, tbTenPhuongTien.Text, tbBienSoXe.Text, lbMaNguoiDung.Text);
+            phuongtien.Sua(lbMaPhuongTien.Text, tbLoaiPhuongTien.Text, tbTenPhuongTien.Text, tbBienSoXe.Text, lbMaNguoiDung.Text);
             MessageBox.Show("Cập nhật thành công@");
             hienThiPhuongTien();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            phuongtien.Xoa(tbMaPhuongTien.Text);
+            phuongtien.Xoa(lbMaPhuongTien.Text);
             MessageBox.Show("Đã xóa!");
             hienThiPhuongTien();
         }
@@ -106,9 +167,49 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             }
             else
             {
-            yeuCauCuuHo.Them(tbMoTaVanDe.Text, tbViTri.Text, tbMaPhuongTien.Text, lbMaNguoiDung.Text);
-            MessageBox.Show("Đã gửi yêu cầu!");
+                phuongtien.Them(tbLoaiPhuongTien.Text, tbTenPhuongTien.Text, tbBienSoXe.Text, lbMaNguoiDung.Text);
+                yeuCauCuuHo.Them(tbMoTaVanDe.Text, tbViTri.Text, tbBienSoXe.Text, lbMaNguoiDung.Text);
+                MessageBox.Show("Đã gửi yêu cầu!");
             }
+        }
+
+        private string AutoIncrementMaPhuongTien()
+        {
+            string maPhuongTienCuoi = GetLastNodeMaPhuongTien("PhuongTien.xml");
+            if (maPhuongTienCuoi != null)
+            {
+                int soPhuongTienCuoi = int.Parse(maPhuongTienCuoi.Substring(2));
+                soPhuongTienCuoi++;
+
+                string maPhuongTienMoi = "PT" + soPhuongTienCuoi.ToString("D3");
+
+                return maPhuongTienMoi;
+            }
+            else
+            {
+                return "PT000";
+            }
+        }
+
+        private string GetLastNodeMaPhuongTien(string path)
+        {
+
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.Load(path);
+
+            XmlNodeList nodeList = xmlDoc.SelectNodes("//_x0027_PhuongTien_x0027_");
+
+            if (nodeList.Count > 0)
+            {
+                XmlNode lastNode = nodeList[nodeList.Count - 1];
+                XmlNode maPhuongTienNode = lastNode.SelectSingleNode("MaPhuongTien");
+
+                if (maPhuongTienNode != null)
+                {
+                    return maPhuongTienNode.InnerText;
+                }
+            }
+            return null;
         }
     }
 }
