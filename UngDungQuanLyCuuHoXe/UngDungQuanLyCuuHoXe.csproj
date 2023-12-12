@@ -63,6 +63,12 @@
     <Compile Include="GUI\Admin\frmAdminDoiMatKhau.Designer.cs">
       <DependentUpon>frmAdminDoiMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Admin\frmGuiYeuCau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\frmGuiYeuCau.Designer.cs">
+      <DependentUpon>frmGuiYeuCau.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Admin\frmQuanLyNguoiDung.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\Admin\frmAdminDoiMatKhau.resx">
       <DependentUpon>frmAdminDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\frmGuiYeuCau.resx">
+      <DependentUpon>frmGuiYeuCau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\frmQuanLyNguoiDung.resx">
       <DependentUpon>frmQuanLyNguoiDung.cs</DependentUpon>
