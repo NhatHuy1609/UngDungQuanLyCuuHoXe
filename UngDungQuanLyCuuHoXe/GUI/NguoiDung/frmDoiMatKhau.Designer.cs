@@ -46,58 +46,61 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Location = new System.Drawing.Point(305, 51);
+            this.label1.Location = new System.Drawing.Point(343, 64);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 29);
+            this.label1.Size = new System.Drawing.Size(227, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "ĐỔI MẬT KHẨU";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(144, 124);
+            this.label2.Location = new System.Drawing.Point(162, 155);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 17);
+            this.label2.Size = new System.Drawing.Size(142, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nhập mật khẩu cũ:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(144, 171);
+            this.label3.Location = new System.Drawing.Point(162, 214);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(134, 17);
+            this.label3.Size = new System.Drawing.Size(150, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Nhập mật khẩu mới:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(144, 224);
+            this.label4.Location = new System.Drawing.Point(162, 280);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(152, 17);
+            this.label4.Size = new System.Drawing.Size(169, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Nhập lại mật khẩu mới:";
             // 
             // tbOldPassword
             // 
-            this.tbOldPassword.Location = new System.Drawing.Point(345, 121);
+            this.tbOldPassword.Location = new System.Drawing.Point(388, 151);
+            this.tbOldPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbOldPassword.Name = "tbOldPassword";
-            this.tbOldPassword.Size = new System.Drawing.Size(288, 22);
+            this.tbOldPassword.Size = new System.Drawing.Size(324, 26);
             this.tbOldPassword.TabIndex = 4;
             // 
             // tbNewPassword
             // 
-            this.tbNewPassword.Location = new System.Drawing.Point(345, 168);
+            this.tbNewPassword.Location = new System.Drawing.Point(388, 210);
+            this.tbNewPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbNewPassword.Name = "tbNewPassword";
-            this.tbNewPassword.Size = new System.Drawing.Size(288, 22);
+            this.tbNewPassword.Size = new System.Drawing.Size(324, 26);
             this.tbNewPassword.TabIndex = 5;
             // 
             // tbConfirmNewPassword
             // 
-            this.tbConfirmNewPassword.Location = new System.Drawing.Point(345, 221);
+            this.tbConfirmNewPassword.Location = new System.Drawing.Point(388, 276);
+            this.tbConfirmNewPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbConfirmNewPassword.Name = "tbConfirmNewPassword";
-            this.tbConfirmNewPassword.Size = new System.Drawing.Size(288, 22);
+            this.tbConfirmNewPassword.Size = new System.Drawing.Size(324, 26);
             this.tbConfirmNewPassword.TabIndex = 6;
             // 
             // btnConfirm
@@ -107,9 +110,10 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnConfirm.Location = new System.Drawing.Point(420, 292);
+            this.btnConfirm.Location = new System.Drawing.Point(472, 365);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(129, 42);
+            this.btnConfirm.Size = new System.Drawing.Size(201, 52);
             this.btnConfirm.TabIndex = 7;
             this.btnConfirm.Text = "Đổi mật khẩu";
             this.btnConfirm.UseVisualStyleBackColor = false;
@@ -121,9 +125,10 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(257, 292);
+            this.btnBack.Location = new System.Drawing.Point(289, 365);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(129, 42);
+            this.btnBack.Size = new System.Drawing.Size(145, 52);
             this.btnBack.TabIndex = 8;
             this.btnBack.Text = "Trở về";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -132,17 +137,17 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             // lbMaNguoiDung
             // 
             this.lbMaNguoiDung.AutoSize = true;
-            this.lbMaNguoiDung.Location = new System.Drawing.Point(21, 19);
+            this.lbMaNguoiDung.Location = new System.Drawing.Point(24, 24);
             this.lbMaNguoiDung.Name = "lbMaNguoiDung";
-            this.lbMaNguoiDung.Size = new System.Drawing.Size(0, 17);
+            this.lbMaNguoiDung.Size = new System.Drawing.Size(0, 20);
             this.lbMaNguoiDung.TabIndex = 9;
             this.lbMaNguoiDung.Visible = false;
             // 
             // frmDoiMatKhau
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 400);
+            this.ClientSize = new System.Drawing.Size(900, 500);
             this.Controls.Add(this.lbMaNguoiDung);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnConfirm);
@@ -153,6 +158,7 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmDoiMatKhau";
             this.Text = "frmDoiMatKhau";
             this.ResumeLayout(false);

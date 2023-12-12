@@ -59,7 +59,7 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             {
                 dgvPhuongTien.DataSource = dv.ToTable();
 
-                // Hide the "MaNguoiDung" column after setting the DataSource
+                //Hide the "MaNguoiDung" column after setting the DataSource
                 dgvPhuongTien.Columns["MaNguoiDung"].Visible = false;
             }
         }
@@ -139,7 +139,7 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             {
                 phuongtien.Them(tbLoaiPhuongTien.Text, tbTenPhuongTien.Text, tbBienSoXe.Text, lbMaNguoiDung.Text);
                 MessageBox.Show("Đã thêm!");
-
+                hienThiPhuongTien();
             }
         }
 
@@ -153,8 +153,15 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            phuongtien.Xoa(lbMaPhuongTien.Text);
-            MessageBox.Show("Đã xóa!");
+            if (!lbMaPhuongTien.Text.Equals(""))
+            {
+                phuongtien.Xoa(lbMaPhuongTien.Text);
+                MessageBox.Show("Đã xóa!");
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn phương tiện để xóa");
+            }
             hienThiPhuongTien();
         }
 

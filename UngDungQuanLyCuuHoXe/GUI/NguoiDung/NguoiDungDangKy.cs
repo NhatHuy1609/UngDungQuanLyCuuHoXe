@@ -31,6 +31,8 @@ namespace UngDungQuanLyCuuHoXe.GUI.NguoiDung
             {
                 dangky.Them(tbUsername.Text, tbPassword.Text, tbHoTen.Text, tbDiaChi.Text, tbSoDienThoai.Text, tbEmail.Text, 1);
                 MessageBox.Show("Đăng ký tài khoản thành công!");
+
+                this.Close();
             }
         }
 

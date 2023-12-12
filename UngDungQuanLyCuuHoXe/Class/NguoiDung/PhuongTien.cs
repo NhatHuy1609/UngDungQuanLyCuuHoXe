@@ -43,13 +43,12 @@ namespace UngDungQuanLyCuuHoXe.Class.NguoiDung
 
         public void Sua(string MaPhuongTien, string LoaiPhuongTien, string TenPhuongTien, string BienSoXe, string MaNguoiDung)
         {
-            string noiDung = "<_x0027_PhuongTien_x0027_>" +
+            string noiDung =
                 "<MaPhuongTien>" + MaPhuongTien + "</MaPhuongTien>" +
                 "<LoaiPhuongTien>" + LoaiPhuongTien + "</LoaiPhuongTien>" +
                 "<TenPhuongTien>" + TenPhuongTien + "</TenPhuongTien>" +
                 "<BienSo>" + BienSoXe + "</BienSo>" +
-                "<MaNguoiDung>" + MaNguoiDung + "</MaNguoiDung>" +
-                "</_x0027_PhuongTien_x0027_>";
+                "<MaNguoiDung>" + MaNguoiDung + "</MaNguoiDung>";
 
             handleXML.Sua("PhuongTien.xml", "_x0027_PhuongTien_x0027_", "MaPhuongTien", MaPhuongTien, noiDung);
         }

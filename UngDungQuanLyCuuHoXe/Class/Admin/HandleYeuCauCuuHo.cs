@@ -48,7 +48,7 @@ namespace UngDungQuanLyCuuHoXe.Class.Admin
 
         public void CapNhatYeuCauCuuHo(string mach, string mota, string thoigian, string vitri, string trangthai, string mapt, string mand)
         {
-            string noiDung = "<MaCuuHo>" + mapt + "</MaCuuHo>" +
+            string noiDung = "<MaCuuHo>" + mach + "</MaCuuHo>" +
                         "<MoTaVanDe>" + mota + "</MoTaVanDe>" +
                         "<ThoiGian>" + thoigian + "</ThoiGian>" +
                         "<ViTri>" + vitri + "</ViTri>" +

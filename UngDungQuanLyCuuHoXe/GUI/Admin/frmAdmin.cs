@@ -101,12 +101,6 @@ namespace UngDungQuanLyCuuHoXe.GUI
             frm.ShowDialog();
         }
 
-        private void thôngTinNgườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmQuanLyNguoiDung frm = new frmQuanLyNguoiDung();
-            frm.ShowDialog();
-        }
-
         private void quảnLýNgườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -124,12 +118,18 @@ namespace UngDungQuanLyCuuHoXe.GUI
             frm.ShowDialog();
         }
 
-        private void xMLSQLToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void thôngTinNgườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmQuanLyNguoiDung frm = new frmQuanLyNguoiDung();
+            frm.ShowDialog();
+        }
+
+        private void xMLSQLToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             try
             {
                 chuyenDoi.CapNhapSQL();
-                MessageBox.Show("Cập nhập SQL server thành công");
+                MessageBox.Show("Chuyển đổi XML -> SQL thành công");
             }
             catch (Exception ex)
             {
@@ -137,17 +137,23 @@ namespace UngDungQuanLyCuuHoXe.GUI
             }
         }
 
-        private void xMLSQLToolStripMenuItem_Click(object sender, EventArgs e)
+        private void sQLXMLToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
                 chuyenDoi.ChuyenDoiSQLSangXML();
-                MessageBox.Show("Tạo XML thành công");
+                MessageBox.Show("Chuyển đổi SQL -> XML thành công");
             }
             catch (Exception ex)
             {
                 MessageBox.Show("" + ex);
             }
+        }
+
+        private void thôngTinNgườiDùngToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            frmQuanLyNguoiDung frm = new frmQuanLyNguoiDung();
+            frm.ShowDialog();
         }
     }
 }
