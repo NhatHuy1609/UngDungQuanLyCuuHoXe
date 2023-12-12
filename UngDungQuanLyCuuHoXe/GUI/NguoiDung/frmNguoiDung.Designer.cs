@@ -30,6 +30,8 @@ namespace UngDungQuanLyCuuHoXe.GUI
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbMaNguoiDung = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.lbUserRole = new System.Windows.Forms.Label();
             this.lbUserName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,7 +45,6 @@ namespace UngDungQuanLyCuuHoXe.GUI
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tabTaiKhoan = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,13 +56,12 @@ namespace UngDungQuanLyCuuHoXe.GUI
             this.tabCuuHo = new System.Windows.Forms.ToolStripMenuItem();
             this.gửiYêuCầuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabTroGiup = new System.Windows.Forms.ToolStripMenuItem();
-            this.lbMaNguoiDung = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelSignIn.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -80,6 +80,24 @@ namespace UngDungQuanLyCuuHoXe.GUI
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin người dùng";
+            // 
+            // lbMaNguoiDung
+            // 
+            this.lbMaNguoiDung.AutoSize = true;
+            this.lbMaNguoiDung.Location = new System.Drawing.Point(242, 86);
+            this.lbMaNguoiDung.Name = "lbMaNguoiDung";
+            this.lbMaNguoiDung.Size = new System.Drawing.Size(26, 20);
+            this.lbMaNguoiDung.TabIndex = 5;
+            this.lbMaNguoiDung.Text = "ID";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(41, 84);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(31, 20);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "ID:";
             // 
             // lbUserRole
             // 
@@ -217,17 +235,6 @@ namespace UngDungQuanLyCuuHoXe.GUI
             this.label3.TabIndex = 0;
             this.label3.Text = "ĐĂNG NHẬP TÀI KHOẢN";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::UngDungQuanLyCuuHoXe.Properties.Resources.car_service_bg;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(845, 394);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -266,14 +273,14 @@ namespace UngDungQuanLyCuuHoXe.GUI
             // subTabDangNhap
             // 
             this.subTabDangNhap.Name = "subTabDangNhap";
-            this.subTabDangNhap.Size = new System.Drawing.Size(165, 26);
+            this.subTabDangNhap.Size = new System.Drawing.Size(224, 26);
             this.subTabDangNhap.Text = "Đăng nhập";
             this.subTabDangNhap.Click += new System.EventHandler(this.đổiMậtKhẩuToolStripMenuItem_Click);
             // 
             // subTabDangKy
             // 
             this.subTabDangKy.Name = "subTabDangKy";
-            this.subTabDangKy.Size = new System.Drawing.Size(165, 26);
+            this.subTabDangKy.Size = new System.Drawing.Size(224, 26);
             this.subTabDangKy.Text = "Đăng ký";
             this.subTabDangKy.Click += new System.EventHandler(this.subTabDangKy_Click);
             // 
@@ -289,13 +296,14 @@ namespace UngDungQuanLyCuuHoXe.GUI
             // đổiMậtKhẩuToolStripMenuItem1
             // 
             this.đổiMậtKhẩuToolStripMenuItem1.Name = "đổiMậtKhẩuToolStripMenuItem1";
-            this.đổiMậtKhẩuToolStripMenuItem1.Size = new System.Drawing.Size(181, 26);
+            this.đổiMậtKhẩuToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.đổiMậtKhẩuToolStripMenuItem1.Text = "Đổi mật khẩu";
+            this.đổiMậtKhẩuToolStripMenuItem1.Click += new System.EventHandler(this.đổiMậtKhẩuToolStripMenuItem1_Click);
             // 
             // đăngXuấtToolStripMenuItem1
             // 
             this.đăngXuấtToolStripMenuItem1.Name = "đăngXuấtToolStripMenuItem1";
-            this.đăngXuấtToolStripMenuItem1.Size = new System.Drawing.Size(181, 26);
+            this.đăngXuấtToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.đăngXuấtToolStripMenuItem1.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem1.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem1_Click);
             // 
@@ -321,23 +329,16 @@ namespace UngDungQuanLyCuuHoXe.GUI
             this.tabTroGiup.Size = new System.Drawing.Size(78, 24);
             this.tabTroGiup.Text = "Trợ giúp";
             // 
-            // lbMaNguoiDung
+            // pictureBox1
             // 
-            this.lbMaNguoiDung.AutoSize = true;
-            this.lbMaNguoiDung.Location = new System.Drawing.Point(242, 86);
-            this.lbMaNguoiDung.Name = "lbMaNguoiDung";
-            this.lbMaNguoiDung.Size = new System.Drawing.Size(26, 20);
-            this.lbMaNguoiDung.TabIndex = 5;
-            this.lbMaNguoiDung.Text = "ID";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(41, 84);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(31, 20);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "ID:";
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::UngDungQuanLyCuuHoXe.Properties.Resources.car_service_bg;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(845, 394);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // frmNguoiDung
             // 
@@ -357,9 +358,9 @@ namespace UngDungQuanLyCuuHoXe.GUI
             this.panel1.PerformLayout();
             this.panelSignIn.ResumeLayout(false);
             this.panelSignIn.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

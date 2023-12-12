@@ -29,21 +29,37 @@ namespace UngDungQuanLyCuuHoXe.Class.NguoiDung
             }
         }
 
-        public void Them(string MoTaVanDe, string ViTri, string MaPhuongTien, string MaNguoiDung)
+        public void Them(string MoTaVanDe, string ViTri, string BienSo, string MaNguoiDung)
         {
             string trangThai = "Chờ xử lý";
             string thoiGian = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
             string maCuuHo = AutoIncrementMaCuuHo();
+            string maPhuongTien = GetMaPhuongTienByBienSo("PhuongTien.xml", BienSo);
             string noiDung = "<_x0027_YeuCauCuuHo_x0027_>" +
                 "<MaCuuHo>" + maCuuHo + "</MaCuuHo>" +
                 "<MoTaVanDe>" + MoTaVanDe + "</MoTaVanDe>" +
                 "<ThoiGian>" + thoiGian + "</ThoiGian>" +
                 "<ViTri>" + ViTri + "</ViTri>" +
                 "<TrangThai>" + trangThai + "</TrangThai>" +
-                "<MaPhuongTien>" + MaPhuongTien + "</MaPhuongTien>" +
+                "<MaPhuongTien>" + maPhuongTien + "</MaPhuongTien>" +
                 "<MaNguoiDung>" + MaNguoiDung + "</MaNguoiDung>" +
                 "</_x0027_YeuCauCuuHo_x0027_>";
             handleXML.Them("YeuCauCuuHo.xml", noiDung);
+        }
+
+        private string GetMaPhuongTienByBienSo(string path, string bienSo)
+        {
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.Load(path);
+
+            XmlNodeList nodes = xmlDoc.SelectNodes($"//_x0027_PhuongTien_x0027_[BienSo='{bienSo}']/MaPhuongTien");
+
+            if (nodes.Count > 0)
+            {
+                return nodes[0].InnerText;
+            }
+
+            return null;
         }
 
         private string AutoIncrementMaCuuHo()
